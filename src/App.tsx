@@ -14,6 +14,7 @@ interface NFT {
   imageUrl?: string;
   tokenId: string;
   contractAddress: string;
+  collectionName:string;
 }
 
 interface NFTCollectionResponse {
@@ -51,7 +52,7 @@ function App() {
         setNFTs([]);
         setIsLoading(false);
       });
-  }, [address]);
+  }, [address,fetchCollection]);
 
   // JSX containing our conditional rendering
   return (
